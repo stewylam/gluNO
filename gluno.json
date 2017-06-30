@@ -1,0 +1,163 @@
+[
+{
+	"Name": "Bagels & Beans",
+	"Address": "Almost everywhere",
+	"City": "",
+	"Website": "http://www.bagelsbeans.nl/nl",
+	"Description": "They serve gluten-free bagels."
+},
+{
+	"Name": "Piqniq",
+	"Address": "Lindengracht 59 hs",
+	"City": "Amsterdam",
+	"Website": "http://www.lunchcafepiqniq.nl/main/",
+	"Description": "Glutenfree Sandwiches"
+},
+{
+	"Name": "Cotton Cake",
+	"Address": "1e van der Helststraat 76-hs",
+	"City": "Amsterdam",
+	"Website": "http://cottoncake.nl/",
+	"Description": ""
+},
+{
+	"Name": "Beter & Leuk",
+	"Address": "1e Oosterparkstraat 91 ",
+	"City": "Amsterdam",
+	"Website": "http://beterenleuk.nl/",
+	"Description": ""
+},
+{
+	"Name": "Pancakes Amsterdam",
+	"Address": "Berenstraat 38",
+	"City": "Amsterdam",
+	"Website": "http://www.pancakes.amsterdam/",
+	"Description": "At Pancakes Amsterdam, all Dutch pancakes are made with fair-trade buckwheat flour, real eggs, biological milk and our ‘secret ingredient’. Moreover, gluten free pancakes and lactose free pancakes are available at all our locations."
+},
+{
+	"Name": "Pancakes Amsterdam",
+	"Address": "Prins Hendrikkade 48",
+	"City": "Amsterdam",
+	"Website": "http://www.pancakes.amsterdam/",
+	"Description": "At Pancakes Amsterdam, all Dutch pancakes are made with fair-trade buckwheat flour, real eggs, biological milk and our ‘secret ingredient’. Moreover, gluten free pancakes and lactose free pancakes are available at all our locations."
+},
+{
+	"Name": "Pancakes Amsterdam",
+	"Address": "Prinsengracht 277",
+	"City": "Amsterdam",
+	"Website": "http://www.pancakes.amsterdam/",
+	"Description": "At Pancakes Amsterdam, all Dutch pancakes are made with fair-trade buckwheat flour, real eggs, biological milk and our ‘secret ingredient’. Moreover, gluten free pancakes and lactose free pancakes are available at all our locations."
+},
+	{
+	"Name": "Haesje Claes",
+	"Address": "Spuistraat 273-275",
+	"City": "Amsterdam",
+	"Website": "http://www.haesjeclaes.nl/home",
+	"Description": "Special Glutenfree menu. They also have glutenfree bread and beer."
+},
+{
+	"Name": "Mastino",
+	"Address": "Eerste van der Helststraat 78hs",
+	"City": "Amsterdam",
+	"Website": "http://mastinopizza.nl/",
+	"Description": "Mastino pizzas are hand made with spelt , multigrain and soya traditional flower."
+},
+{
+	"Name": "Lieve",
+	"Address": "Herengracht 88",
+	"City": "Amsterdam",
+	"Website": "https://www.lieve-amsterdam.nl/en/restaurant",
+	"Description": "For those of us with allergies or dietary restrictions we have adapted versions of our menu, providing a gluten-, nut- or lactose-free dinner."
+},
+{
+	"Name": "Bazar",
+	"Address": "Albert Cuypstraat 182",
+	"City": "Amsterdam",
+	"Website": "http://www.hotelbazar.nl/nl/restaurant-bazar-amsterdam/",
+	"Description": ""
+},
+{
+	"Name": "Bazar",
+	"Address": "Witte de Withstraat 16",
+	"City": "Rotterdam",
+	"Website": "http://www.hotelbazar.nl/nl/restaurant-bazar-rotterdam/",
+	"Description": ""
+},
+{
+	"Name": "Moeders",
+	"Address": "Rozengracht 251",
+	"City": "Amsterdam",
+	"Website": "http://www.moeders.com/",
+	"Description": "Special gluten and lactose-free menu"
+},
+{
+	"Name": "De Italiaan",
+	"Address": "Bosboom Toussaintstraat 29",
+	"City": "Amsterdam",
+	"Website": "http://deitaliaan.com/",
+	"Description": "GLutenfree options are displayed in the menu"
+},
+{
+	"Name": "La Viña",
+	"Address": "Maasstraat 72",
+	"City": "Amsterdam",
+	"Website": "http://www.lavinaexperience.nl/",
+	"Description": "NCV Logo"
+},
+{
+	"Name": "Tolhuistuin",
+	"Address": "IJpromenade 2",
+	"City": "Amsterdam",
+	"Website": "http://www.tht.nl/",
+	"Description": "Special menu with all allergies"
+},
+{
+	"Name": "Bertmans",
+	"Address": "Zaagmolenkade 15",
+	"City": "Rotterdam",
+	"Website": "http://bertmans.nl/",
+	"Description": "Menu is mostly glutenfree"
+},
+{
+	"Name": "Efteling",
+	"Address": "Europalaan 1",
+	"City": "Kaatsheuvel",
+	"Website": "https://www.efteling.com",
+	"Description": ""
+},
+{
+	"Name": "Bakker Leo",
+	"Address": "Vincent van Goghplein 21",
+	"City": "Almelo",
+	"Website": "https://glutenvrij.bakkerleo.nl/",
+	"Description": "Glutenfree bread. Order Online"
+},
+{
+	"Name": "Domino's",
+	"Address": "Different Locations",
+	"City": "",
+	"Website": "https://www.dominos.nl/menu/glutenvrije-pizza-bestellen",
+	"Description": "Two glutenfree pizza's, NCV logo"
+},
+{
+	"Name": "De Ontmoeting",
+	"Address": "Graafseweg 27",
+	"City": "Nijmegen",
+	"Website": "http://tapasontmoeting.nl/",
+	"Description": "All dishes are glutenfree, and most of it is lactosefree, NCV logo"
+},
+{
+	"Name": "Hofje Zonder Zorgen",
+	"Address": "Grote Houtstraat 142A ",
+	"City": "Haarlem",
+	"Website": "https://hofjezonderzorgen.nl/",
+	"Description": "Glutenfree options available. €0.75 supplement, NCV logo"
+},
+{
+	"Name": "McDonalds",
+	"Address": "Different Locations",
+	"City": "",
+	"Website": "http://www.mcdonalds.nl/restaurant",
+	"Description": "Glutenfree hamburgers, cheeseburger and quarter pounder, NCV logo"
+}
+]
