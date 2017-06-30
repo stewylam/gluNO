@@ -1,0 +1,30 @@
+doctype html
+html
+	head
+	//- style
+	//- 	include ../public/css/search.css
+	//- 	include ../public/js/search.js
+
+		title Restaurants
+	body
+		div(class='nav')
+			h1 GLU<b>NO</b>
+		form(action='/search', method='post', autocomplete='off')
+			input(type='text', name='search', placeholder='Search for restaurant name, place name' style='width: 300px' value=search)
+			button(type='submit', name='submit') Submit
+
+		p Overview all restaurants database
+		br
+		br
+		br
+		div(class='container')
+			each restaurant in restaurants
+				div(class='box')
+					<a href="/restaurant?id=#{restaurant.id}"> #{restaurant.Name} </a> 
+					p #{restaurant.Address}
+					p #{restaurant.City}
+					p <b>Website:</b> <a href='#{restaurant.Website}'>#{restaurant.Name}</a>
+					p <b>Description:</b> #{restaurant.Description}
+					br
+
+

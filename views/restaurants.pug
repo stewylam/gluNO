@@ -17,11 +17,13 @@ html
 			input(type='text', name='search', placeholder='Search for restaurant name, place name' style='width: 300px' value=search)
 			button(type='submit', name='submit') Submit
 
-		p Overview all restaurants database
+		p Overview all restaurants database			
+		p #{message}
 		br
 		br
 		br
 		div(class='container')
+
 			each restaurant in restaurants
 				div(class='box')
 					<a href="/restaurant?id=#{restaurant.id}"> #{restaurant.Name} </a> 

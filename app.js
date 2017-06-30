@@ -33,6 +33,7 @@ const Restaurant = db.define('restaurant', {
 });
 
 
+
 /*User.hasMany(Restaurant);
 Restaurant.belongsTo(User);
 User.hasMany(Review);
@@ -73,12 +74,35 @@ app.post('/search', (req, res) => {
     res.render('index', {message: 'Please type in the restaurant name or city to find a restaurant'})
   } 
   else {
-    Restaurant.findAll()
+    Restaurant.findAll({
+      where: {
+        $or: [{Name: search},
+          {City: search}] 
+      }
+    })
     .then((result) => {    
-    res.render('restaurants', {search: search, restaurants: result})
+      if (result === undefined) {
+        res.render('restaurants', {restaurants: result, message: 'Sorry, that restaurant is not in our database'})
+      }
+      else {
+        res.render('search', {search: search, restaurants: result})
+        console.log(result)
+      }    
     })
   }
 });
+
+app.get('/search', (req, res) => {
+  res.render('search')
+})
+
+app.get('/restaurants', (req, res) => {
+  Restaurant.findAll()
+  .then((result) => {    
+    res.render('restaurants', {restaurants: result})
+  })
+})
+
 
 app.post('/add', (req, res) => {
   Restaurant.findOne({
@@ -103,15 +127,8 @@ app.post('/add', (req, res) => {
   })
 })
 
-app.get('/restaurants', (req, res) => {
-  Restaurant.findAll()
-  .then((result) => {    
-    res.render('restaurants', {restaurants: result})
-  })
-})
 
 app.get('/restaurant', (req, res) => {
-  console.log(req.query.id);
   Restaurant.findOne({
     where: {
       id: req.query.id
