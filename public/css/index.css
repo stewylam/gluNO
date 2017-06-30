@@ -1,5 +1,88 @@
-.container {
-	display: grid;
-	grid-template-columns: 50% 16,6% 16,6% 16,16%;
-	grid-template-rows: 70% 15% 15%;
+/* Pen-specific styles */
+* {
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0;	
+  font-size: 1.25rem;
+  line-height: 150%;
+  text-shadow: 0 2px 2px #b6701e;
+
+}
+
+section {
+  color: #fff;
+  text-align: center;
+}
+
+div {
+  height: 100%;
+}
+
+article {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.75rem 0;
+}
+
+/* Pattern styles */
+.container {
+  display: table;
+  width: 100%;
+}
+
+.left {
+  background-color: #ff9e2c;
+  position: absolute;
+  left: 0px;
+  width: 50%;
+}
+
+.left:hover {
+	background-color: grey;
+}
+
+.right {
+  background-color: #b6701e;
+  position: absolute;
+  right: 0px;
+  width: 50%;
+}
+
+.right:hover {
+	background-color: black;
+	 -webkit-animation-name: example;
+    -webkit-animation-duration: 4s;
+    animation-name: example;
+    animation-duration: 4s;
+}
+
+.share {
+	margin-top: 160px;
+}
+
+input, textarea {
+	font-family: 'Sintony';
+	font-size: 12px;
+}
+
+h2 {
+	font-family:'Cabin Sketch';
+	color: white;
+	font-size: 50px;
+}
+
+@keyframes example {
+    from {background-color: black;}
+    to {background-color: #b6701e;}
+}
+

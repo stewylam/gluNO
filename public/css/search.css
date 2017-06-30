@@ -1,11 +1,6 @@
-html, body {
-  height: 100%;
-} 
-
 body {
   margin: 0;
 }
-
 
 li {
   list-style: none;
@@ -82,38 +77,4 @@ h1:hover {
 .menu a.active {
     background-color: #4CAF50;
     color: white;
-}
-
-/* info van restaurant */
-
-.info-container {
-  border-style: solid;
-  border-width: 2px;
-  border-radius: 10px 50px;
-  width: 400px;
-  border-color: grey;
-  margin-top: 30px;
-  margin-left: 10%;
-  text-align: center
-}
-
-.info {
-  padding: 20px;
-  display: inline-block;
-  text-align: left;
-
-}
-
-h2 {
-  font-family: 'Sintony';
-}
-
-
-/* google map */
-
-#map {
-  height: 30%;
-  width: 30%;
-  float: left;
-  margin-left: 50px;
 }

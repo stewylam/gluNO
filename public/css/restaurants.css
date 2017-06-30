@@ -1,10 +1,69 @@
-.nav {
-	width: 100%;
-	background-color: red;
+body {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+  font-family: 'julius sans one';
+}
+
+
+p {
+  font-family: 'Sintony';
+}
+
+menu {
+  display: table;
+  table-layout: fixed;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
+ul li {
+    flex-grow: 1;
+}
+
+form {
+  display: none;
+}
+
+.menu {
+  overflow: hidden;
+  background-color: #333;
+  width: 100%;
 }
 
 h1 {
-	float: center;
+  font-family: 'monoton';
+  color: grey;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+h1:hover {
+  color: yellow;
+}
+
+.search {
+  text-align: center;
+}
+
+.menu a {
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.menu a:hover {
+  background-color: #ddd;
+  color: black;
 }
 
 .container {
@@ -18,4 +77,16 @@ h1 {
 	width: 250px;
 	float: left;
 	height: 300px;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  font-family:'Sintony'
+}
+
+.name {
+  font-family:'Sintony';
+  font-weight: bold;
+  font-size: 20px;
 }

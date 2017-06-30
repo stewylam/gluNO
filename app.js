@@ -32,14 +32,19 @@ const Restaurant = db.define('restaurant', {
   Description: Sequelize.TEXT
 });
 
+const Review = db.define('review', {
+  name: Sequelize.STRING,
+  info: Sequelize.TEXT,
+  rating: Sequelize.INTEGER
+});
 
 
 /*User.hasMany(Restaurant);
 Restaurant.belongsTo(User);
 User.hasMany(Review);
-Review.belongsTo(User);
+Review.belongsTo(User);*/
 Restaurant.hasMany(Review);
-Review.belongsTo(Restaurant);*/
+Review.belongsTo(Restaurant);
 
 // add json file to model
 fs.readFile('./gluno.json', 'utf-8', function(err, data){
@@ -62,10 +67,18 @@ for (var i = 0; i < restaurants.length; i++)
 
 /// different routes
 
-//// index
+////  ROUTE --- index
 app.get('/', (req, res) => {
     res.render('index'); // information gets passed to PUG and get renders to HTML
 });
+
+
+
+///// ROUTE --- SEARCH 
+
+app.get('/search', (req, res) => {
+  res.render('search')
+})
 
 app.post('/search', (req, res) => {
   let search = req.body.search
@@ -73,6 +86,9 @@ app.post('/search', (req, res) => {
   if (search.length === 0) {
     res.render('index', {message: 'Please type in the restaurant name or city to find a restaurant'})
   } 
+  if (search === undefined) {
+  res.render('index', {message: 'Sorry this restaurant is unknown. Share the tip!'})
+  }
   else {
     Restaurant.findAll({
       where: {
@@ -86,23 +102,13 @@ app.post('/search', (req, res) => {
       }
       else {
         res.render('search', {search: search, restaurants: result})
-        console.log(result)
       }    
     })
   }
 });
 
-app.get('/search', (req, res) => {
-  res.render('search')
-})
 
-app.get('/restaurants', (req, res) => {
-  Restaurant.findAll()
-  .then((result) => {    
-    res.render('restaurants', {restaurants: result})
-  })
-})
-
+///// ADD restaurant
 
 app.post('/add', (req, res) => {
   Restaurant.findOne({
@@ -128,18 +134,49 @@ app.post('/add', (req, res) => {
 })
 
 
+////// ROUTE --- OVERVIEW RESTAURANTS
+
+app.get('/restaurants', (req, res) => {
+  Restaurant.findAll()
+  .then((result) => {    
+    res.render('restaurants', {restaurants: result})
+  })
+})
+
+
+
+//// ROUTE -- SPECIFIC RESTURANT
+
 app.get('/restaurant', (req, res) => {
   Restaurant.findOne({
     where: {
       id: req.query.id
     }
   })
-  .then(result => { 
+  .then(result =>{
+/*    Review.findAll()
+  })
+  .then(result => { */
     res.render('restaurant', {restaurant: result})
   })
 });
 
-app.post('')
+//// ADD REVIEWS
+
+app.post('/restaurant', (req, res) => {
+  Review.create({
+    name: req.body.name,
+    review: req.body.info,
+    rating: req.body.rating
+  })
+  .then(reviews => {
+    res.render('restaurant', {review: reviews})
+  })
+})
+
+
+
+//// App Listener
 
 
 const server = app.listen(3000, () => {

@@ -1,17 +1,27 @@
 doctype html
 html
 	head
-	//- style
-	//- 	include ../public/css/search.css
-	//- 	include ../public/js/search.js
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+		link(href='https://fonts.googleapis.com/css?family=Julius+Sans+One|Monoton|Sintony:400,700', rel='stylesheet')
+	style
+		include ../public/css/search.css
+		include ../public/js/search.js
 
 		title Restaurants
 	body
-		div(class='nav')
-			h1 GLU<b>NO</b>
-		form(action='/search', method='post', autocomplete='off')
-			input(type='text', name='search', placeholder='Search for restaurant name, place name' style='width: 300px' value=search)
-			button(type='submit', name='submit') Submit
+		div(class='container')
+			div(class='menu')
+				ul
+					li(class='add')
+						a(href='/') Add
+					li(class='search') 	
+						h1 GLUNO
+						form(action='/search', method='post', autocomplete='off')
+						input(type='text', name='search', placeholder='Search on restaurant name or city' style='width: 300px' value=search)
+						button(type='submit', name='submit') Search
+					li(class='rest') 
+						a(href='/restaurants') Restaurants
+
 
 		p Overview all restaurants database
 		br
