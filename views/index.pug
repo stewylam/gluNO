@@ -15,21 +15,25 @@ html
       div(class='left')
         article
           div(class='share')
-            h2 WANNA SHARE?
+            h2 WANNA&nbsp;
+              div(class='words')
+                span(class='middle') SHARE?&nbsp;
+                span(class='top') CONTRIBUTE?&nbsp;
+                span(class='bottom') CARE? 
             p #{messageL}
           div(class='form')
             form(action='/add', method='post', autocomplete='off')
-              input(type='text', name='Name', placeholder='Name of the Restaurant', style='width: 350px')
+              input(type='text', name='Name', placeholder=' Name of the Restaurant', style='width: 350px')
               br
-              input(type='text', name='Address', placeholder='streetname + #no', style='width: 350px')
+              input(type='text', name='Address', placeholder=' streetname + #no', style='width: 350px')
               br
-              input(type='text', name='City', placeholder='city', style='width: 350px')
+              input(type='text', name=' City', placeholder=' City', style='width: 350px')
               br
-              input(type='text', name='Website', placeholder='Website', style='width: 350px')
+              input(type='text', name='Website', placeholder=' Website', style='width: 350px')
               br
               textarea(type='text', name='info', placeholder='Description: e.g. what do they offer? Special menu\'s? Gluten-free cake', style='width: 350px; height: 70px')
               br
-              button(type='submit', value='Submit Restaurant') Share Restaurant Tip
+              button(type='submit', name='add') Pay it Forward
 
       div(class='right')
         article
@@ -38,9 +42,9 @@ html
             p #{message}
             div(class='search')
               form(action='/search', method='post', autocomplete='off')
-                input(type='text', name='search', placeholder='Search for restaurant name or place name' style='width: 300px')
+                input(type='text', name='search', placeholder=' Search for restaurant name or place name' style='width: 300px')
                 br
                 br
-                button(type='submit', name='submit') Let's Eat!
+                button(type='search') Search
 
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")

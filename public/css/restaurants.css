@@ -2,19 +2,10 @@ body {
   margin: 0;
 }
 
+/* nav bar */
 li {
   list-style: none;
   font-family: 'julius sans one';
-}
-
-
-p {
-  font-family: 'Sintony';
-}
-
-menu {
-  display: table;
-  table-layout: fixed;
 }
 
 ul {
@@ -27,29 +18,19 @@ ul li {
 }
 
 form {
-  display: none;
+  margin-top: 2px;
+  text-align: center;
+  height: 10px;
+  margin-top: 7px;
 }
 
 .menu {
   overflow: hidden;
   background-color: #333;
   width: 100%;
-}
-
-h1 {
-  font-family: 'monoton';
-  color: grey;
   margin: 0;
-  text-align: center;
-  margin-bottom: 3px;
-}
-
-h1:hover {
-  color: yellow;
-}
-
-.search {
-  text-align: center;
+  height: 100px;
+  padding: 8px;
 }
 
 .menu a {
@@ -59,6 +40,7 @@ h1:hover {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  padding-top: 25px;
 }
 
 .menu a:hover {
@@ -66,27 +48,74 @@ h1:hover {
   color: black;
 }
 
-.container {
-	display: grid;
+.search {
+  text-align: center;
 }
 
-
-.box {
-	border-style: solid;
-	border-width: 1px;
-	width: 250px;
-	float: left;
-	height: 300px;
+h1 {
+  font-family: 'monoton';
+  color: grey;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 5px;
+  animation: slideDown 0.5s linear;
 }
+
+h1:hover {
+  color: yellow;
+}
+
+.add {
+  float: left;
+  animation: flyInLeft 0.5s linear;
+}
+
+.rest {
+  float: right;
+  animation: flyInRight 0.5s linear;
+}
+
+@keyframes flyInRight {
+  0% {transform: translateX(100px)}
+  100% {transform: translateX(0)}
+}
+
+@keyframes flyInLeft{
+  0% {transform: translateX(-100px)}
+  100% {transform: translateX(0)}
+}
+
+@keyframes slideDown {
+  0% {transform: translateY(-50px);}
+  100% {transform: translateY(0);}
+}
+
 
 a {
+  font-family: Sintony;
   text-decoration: none;
-  list-style: none;
-  font-family:'Sintony'
 }
 
-.name {
-  font-family:'Sintony';
-  font-weight: bold;
-  font-size: 20px;
+a.name {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.col-3 {
+  background-color: #B2ADAA;
+  border-style: solid;
+  border-width: 1px;
+  padding: 10px;
+  border-color: black 0.5;
+  overflow: hidden;
+  width: 50%;
+}
+
+.col-3:hover {
+  opacity: 0.8;
+}
+
+p {
+  font-family: 'Sintony';
+  font-size: 14px;
 }

@@ -8,6 +8,7 @@ body {
   font-size: 1.25rem;
   line-height: 150%;
   text-shadow: 0 2px 2px #b6701e;
+  background-color: black;
 
 }
 
@@ -41,38 +42,90 @@ h1 {
 }
 
 .left {
-  background-color: #ff9e2c;
+  background-image:  -webkit-linear-gradient(45deg, rgba(228,255,74,1) 0%, rgba(255,0,0,1) 50%, rgba(255,255,0,1) 100%);
   position: absolute;
   left: 0px;
   width: 50%;
+  animation: slideDown 0.75s 0s forwards;
 }
 
+
 .left:hover {
-	background-color: grey;
+	background-image: -webkit-linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,255,255,1) 100%);
+}
+
+@keyframes slideDown {
+     from {
+         -webkit-transform: translateY(600px) 
+     }
+     to {
+         -webkit-transform: translateY(0px) 
+     }
+
 }
 
 .right {
-  background-color: #b6701e;
+  background-image: -webkit-linear-gradient(45deg, rgba(255,0,255,1) 0%, rgba(0,255,255,1) 100%);
   position: absolute;
   right: 0px;
   width: 50%;
+  animation: slideUp 0.75s 0s forwards;
 }
 
 .right:hover {
-	background-color: black;
-	 -webkit-animation-name: example;
-    -webkit-animation-duration: 4s;
-    animation-name: example;
-    animation-duration: 4s;
+	background-image: -webkit-linear-gradient(45deg, rgba(255,255,0,1) 0%, rgba(0,255,255,1) 100%); 
+
+}
+
+@keyframes slideUp {
+     from {
+         -webkit-transform: translateY(-700px) 
+     }
+     to {
+         -webkit-transform: translateY(0px) 
+     }
 }
 
 .share {
-	margin-top: 160px;
+	margin-top: 180px;
+
 }
+
+
+@keyframes change {
+	0% {-webkit-transform: translateX(0)}
+	50% {-webkit-transform: translateX(-100px)}
+	100% {-webkit-transform: translateX(200px)}
+}
+
+@keyframes animate {
+    0% { opacity: 0; }
+    2% { opacity: 0; -webkit-transform: translateY(-30px); }
+    5% { opacity: 1; -webkit-transform: translateY(0px);}
+    17% { opacity: 1; -webkit-transform: translateY(0px); }
+    20% { opacity: 0; -webkit-transform: translateY(30px); }
+    80% { opacity: 0; }
+    100% { opacity: 0; }
+} 
 
 input, textarea {
 	font-family: 'Sintony';
-	font-size: 12px;
+	font-size: 13px;
+	border-radius: 5px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: yellow;
+
+}
+
+input:active {
+	border-style: solid;
+	border-width: 2px;
+	border-color: grey;
+}
+
+textarea {
+	margin-top: 7px;
 }
 
 h2 {
@@ -81,8 +134,30 @@ h2 {
 	font-size: 50px;
 }
 
-@keyframes example {
-    from {background-color: black;}
-    to {background-color: #b6701e;}
-}
 
+button {
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 80px;
+	border-color: red;
+	background-color: white;
+	font-family: Sintony;
+	font-size: 13px;
+	position: relative;
+}	
+
+
+button:hover {
+  border-color: orange;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+
+} 
+
+p {
+  font-family: Sintony;
+  font-size: 12px;
+  background: blue;
+  text-align: center;
+}

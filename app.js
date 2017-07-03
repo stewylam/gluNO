@@ -32,38 +32,29 @@ const Restaurant = db.define('restaurant', {
   Description: Sequelize.TEXT
 });
 
-const Review = db.define('review', {
-  name: Sequelize.STRING,
-  info: Sequelize.TEXT,
-  rating: Sequelize.INTEGER
-});
+if(process.argv[2] === "--populate") {
+  console.log("populate database")
+  // add json file to model
+  fs.readFile('./gluno.json', 'utf-8', function(err, data){
+        if (err) {
+          throw err;
+        }
 
+  var restaurants = JSON.parse(data)
 
-/*User.hasMany(Restaurant);
-Restaurant.belongsTo(User);
-User.hasMany(Review);
-Review.belongsTo(User);*/
-Restaurant.hasMany(Review);
-Review.belongsTo(Restaurant);
-
-// add json file to model
-fs.readFile('./gluno.json', 'utf-8', function(err, data){
-      if (err) {
-        throw err;
-      }
-
-var restaurants = JSON.parse(data)
-
-for (var i = 0; i < restaurants.length; i++)
-    Restaurant.create({
-      Name: restaurants[i].Name,
-      Address: restaurants[i].Address,
-      City: restaurants[i].City,
-      Website: restaurants[i].Website,
-      Description: restaurants[i].Description
+  for (var i = 0; i < restaurants.length; i++)
+      Restaurant.create({
+        Name: restaurants[i].Name,
+        Address: restaurants[i].Address,
+        City: restaurants[i].City,
+        Website: restaurants[i].Website,
+        Description: restaurants[i].Description
+    })
   })
-})
-
+}
+else {
+  console.log("Is database already populated?")
+}
 
 /// different routes
 
@@ -82,7 +73,7 @@ app.get('/search', (req, res) => {
 
 app.post('/search', (req, res) => {
   let search = req.body.search
-
+  console.log("First search" + search)
   if (search.length === 0) {
     res.render('index', {message: 'Please type in the restaurant name or city to find a restaurant'})
   } 
@@ -101,6 +92,7 @@ app.post('/search', (req, res) => {
         res.render('restaurants', {restaurants: result, message: 'Sorry, that restaurant is not in our database'})
       }
       else {
+        console.log("Second search " + search)  
         res.render('search', {search: search, restaurants: result})
       }    
     })
@@ -111,8 +103,12 @@ app.post('/search', (req, res) => {
 ///// ADD restaurant
 
 app.post('/add', (req, res) => {
+  if (req.body.Name.length === 0 || req.body.Address.length === 0 || req.body.City.length === 0 || req.body.Name.Website === 0 || req.body.info.length === 0) {
+    res.render('index', {messageL: 'Please fill out all information to share the tip'})
+  }
+
   Restaurant.findOne({
-    where: {Name: name}
+    where: {Name: req.body.Name}
   })
   .then(restaurant => {
     if(restaurant){
@@ -121,13 +117,13 @@ app.post('/add', (req, res) => {
     else {
       Restaurant.create({
         Name: req.body.Name,
-        Address: req.body.Name,
+        Address: req.body.Address,
         City: req.body.City,
         Website: req.body.Website,
         Description: req.body.info
       })
       .then(function(restaurants) {
-      res.render('restPage', {restaurant: restaurants})
+      res.render('restaurant', {restaurant: restaurants})
       })
     }
   })

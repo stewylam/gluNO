@@ -1,16 +1,19 @@
 doctype html
 html
 	head
-		
-		link(rel='stylesheet' type='text/css' href='css/restaurant.css')
-		script(src='js/restaurant.js')
 		script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
 		link(href='https://fonts.googleapis.com/css?family=Julius+Sans+One|Monoton|Sintony:400,700', rel='stylesheet')
-
+		link(href='https://fonts.googleapis.com/css?family=Julius+Sans+One|Monoton|Sintony:400,700', rel='stylesheet')
+		link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css', integrity='sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ', crossorigin='anonymous')
+		script(src='https://code.jquery.com/jquery-3.1.1.slim.min.js', integrity='sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n', crossorigin='anonymous')
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js', integrity='sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb', crossorigin='anonymous')
+		script(src='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js', integrity='sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn', crossorigin='anonymous')
+		link(rel='stylesheet' type='text/css' href='css/restaurant.css')
+		script(src='js/restaurant.js')
 
 		title Restaurants
 	body
-		div(class='container')
+		div(class='container-fluid')
 			div(class='menu')
 				ul
 					li(class='add')
@@ -18,41 +21,31 @@ html
 					li(class='search') 	
 						h1 GLUNO
 						form(action='/search', method='post', autocomplete='off')
-						input(type='text', name='search', placeholder='Search on restaurant name or city' style='width: 300px' value=search)
-						button(type='submit', name='submit') Search
+							input(type='text', name='search', placeholder='Search on restaurant name or city' style='width: 300px' value=search)
+							button(type='submit', name='submit') Search
 					li(class='rest') 
 						a(href='/restaurants') Restaurants
 
+		br
+		br
+		br
+		.container
+			.row
+				.col-6
+					div(class='info-container')
+						div(class='info')
+							h2 <img src='../img/naam-k.png'> &nbsp <b>#{restaurant.Name}</b>
+							p <img src='../img/map-k.png'> &nbsp &nbsp #{restaurant.Address}, #{restaurant.City}
+							p <img src='../img/web-k.png'> &nbsp &nbsp <a class='website' href='#{restaurant.Website}' target='_blank'>#{restaurant.Website}</a>
+							p <img src='../img/info-k.png'> &nbsp &nbsp #{restaurant.Description}
 
-		div(class='info-container')
-			div(class='info')
-				h2 <img src='../img/naam-k.png'> &nbsp <b>#{restaurant.Name}</b>
-				p <img src='../img/map-k.png'> &nbsp &nbsp #{restaurant.Address}, #{restaurant.City}
-				p <img src='../img/web-k.png'> &nbsp &nbsp <a class='website' href='#{restaurant.Website}' target='_blank'>#{restaurant.Website}</a>
-				p <img src='../img/info-k.png'> &nbsp &nbsp #{restaurant.Description}
-
-		div(class='rating')
-			h2 Rating: 
 		
+				.col-6
 
-		div(id='floating-panel')
-
-			input#address(type='textbox', value=restaurant.Address)
-		div(id='map')
+					div(id='map')
+					div(id='floating-panel')
+						input#address(type='textbox', value=restaurant.Address)
 		
-		div(class='reviewForm')
-			form(action='/restaurant', method='post', autocomplete='off')
-				input(type='text', name='name', placeholder='Your Name', style='width: 200px')
-				br
-				textarea(type='text', name='info', placeholder='e.g. Were there a lot of options? Quality of the glutenfree food?', style='width: 200px; height: 70px')
-				br
-				p Your Rating:
-				input(type='text', name='rating', placeholder='1 t/m 10', style='width: 50px')
-				button(type='submit', value='Submit Restaurant') Add your review
-
-		//- div(class='review')
-		//- 	each review in reviews
-		//- 		p #{review.info} by #{review.name}
-		//- 		p #{rating}
+	
 
 		script(async, defer, src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBMVoONY_EeWiLGprkUZ4WISbtCkvrylO8&callback=initMap')

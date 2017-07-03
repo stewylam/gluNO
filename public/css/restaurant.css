@@ -6,20 +6,10 @@ body {
   margin: 0;
 }
 
-
+/* nav bar */
 li {
   list-style: none;
   font-family: 'julius sans one';
-}
-
-
-p {
-  font-family: 'Sintony';
-}
-
-menu {
-  display: table;
-  table-layout: fixed;
 }
 
 ul {
@@ -32,37 +22,19 @@ ul li {
 }
 
 form {
-  display: none;
+  margin-top: 2px;
+  text-align: center;
+  height: 10px;
+  margin-top: 7px;
 }
 
 .menu {
   overflow: hidden;
   background-color: #333;
   width: 100%;
-}
-
-.add {
-  float: left;
-}
-
-h1 {
-  font-family: 'monoton';
-  color: grey;
   margin: 0;
-  text-align: center;
-  margin-bottom: 3px;
-}
-
-h1:hover {
-  color: yellow;
-}
-
-.rest {
-  float: right;
-}
-
-.search {
-  text-align: center;
+  height: 100px;
+  padding: 8px;
 }
 
 .menu a {
@@ -72,6 +44,7 @@ h1:hover {
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  padding-top: 25px;
 }
 
 .menu a:hover {
@@ -79,10 +52,48 @@ h1:hover {
   color: black;
 }
 
-.menu a.active {
-    background-color: #4CAF50;
-    color: white;
+.search {
+  text-align: center;
 }
+
+h1 {
+  font-family: 'monoton';
+  color: grey;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 5px;
+  animation: slideDown 0.5s linear;
+}
+
+h1:hover {
+  color: yellow;
+}
+
+.add {
+  float: left;
+  animation: flyInLeft 0.5s linear;
+}
+
+.rest {
+  float: right;
+  animation: flyInRight 0.5s linear;
+}
+
+@keyframes flyInRight {
+  0% {transform: translateX(100px)}
+  100% {transform: translateX(0)}
+}
+
+@keyframes flyInLeft{
+  0% {transform: translateX(-100px)}
+  100% {transform: translateX(0)}
+}
+
+@keyframes slideDown {
+  0% {transform: translateY(-50px);}
+  100% {transform: translateY(0);}
+}
+
 
 /* info van restaurant */
 
@@ -90,30 +101,35 @@ h1:hover {
   border-style: solid;
   border-width: 2px;
   border-radius: 10px 50px;
-  width: 400px;
+  width: 450px;
+  height: auto
   border-color: grey;
-  margin-top: 30px;
-  margin-left: 10%;
-  text-align: center
+  text-align: center;
 }
 
 .info {
-  padding: 20px;
+  padding: 23px;
   display: inline-block;
   text-align: left;
-
+  animation: fadeIn 1s ease-in;
 }
 
-h2 {
-  font-family: 'Sintony';
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
-
 
 /* google map */
 
 #map {
-  height: 30%;
-  width: 30%;
-  float: left;
-  margin-left: 50px;
+  height: 280px;
+  width: 380px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: grey;
+  animation: fadeIn 1s ease-in;
+}
+
+#floating-panel {
+  visibility: hidden;
 }
