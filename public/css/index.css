@@ -8,7 +8,9 @@ body {
   font-size: 1.25rem;
   line-height: 150%;
   text-shadow: 0 2px 2px #b6701e;
-  background-color: black;
+  height: 100%;
+  overflow: hidden;
+/*   background-color: black; */
 
 }
 
@@ -42,7 +44,7 @@ h1 {
 }
 
 .left {
-  background-image:  -webkit-linear-gradient(45deg, rgba(228,255,74,1) 0%, rgba(255,0,0,1) 50%, rgba(255,255,0,1) 100%);
+  background-color: black;
   position: absolute;
   left: 0px;
   width: 50%;
@@ -50,10 +52,6 @@ h1 {
   z-index: -1;
 }
 
-
-.left:hover {
-	background-image: -webkit-linear-gradient(45deg, rgba(255,0,0,1) 0%, rgba(0,255,255,1) 100%);
-}
 
 @keyframes slideDown {
      from {
@@ -66,7 +64,7 @@ h1 {
 }
 
 .right {
-  background-image: -webkit-linear-gradient(45deg, rgba(255,0,255,1) 0%, rgba(0,255,255,1) 100%);
+  background-color: orange;
   position: absolute;
   right: 0px;
   width: 50%;
@@ -74,10 +72,6 @@ h1 {
   z-index: -1;
 }
 
-.right:hover {
-	background-image: -webkit-linear-gradient(45deg, rgba(255,255,0,1) 0%, rgba(0,255,255,1) 100%); 
-
-}
 
 @keyframes slideUp {
      from {
@@ -89,8 +83,11 @@ h1 {
 }
 
 .share {
-	margin-top: 180px;
+	margin-top: 300px;
+}
 
+.go {
+  margin-top: 160px;
 }
 
 
@@ -171,26 +168,32 @@ p {
 /* Wheat Animation */
 .wrapper {
   position:absolute;
-  margin-top: 20px;
   display: block;
-  margin-left: 120px;
-  z-index: 1;
+  z-index: 2;
+  height: 40%;
+  margin-left: 100px;
 }
 
+.wrapper2 {
+  position:absolute;
+  display: block;
+  z-index: 2;
+  height: 40%;
+  margin-left: 100px;
+}
 
-#top_1_ {
+#top {
   animation: moveLR 2s 1s infinite;
   transform-origin: left bottom;
 }
 
-#top_1_:hover {
-    animation: flyAway 2s 1s;
+#top:hover {
+    animation: flyAway 2s 0s;
 }
 
 #B1 {
   animation: moveRL 2s infinite;
   transform-origin: left bottom;
-  animation: flyAway 2s 1s;
 }
 
 #B2 {
@@ -266,7 +269,7 @@ p {
   50% {transform: translateX(50px);}
   60% {transform: translateX(60px);}
   70% {transform: translateX(70px);}
-  80% {transform: translateX(80px);}
-  90% {transform: translateX(90px);}
-  100% {transform: translateX(100px);}
+  80% {transform: translateX(200px);}
+  90% {transform: translateX(250px);}
+  100% {transform: translateX(1000px);}
 }
