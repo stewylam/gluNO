@@ -28,6 +28,14 @@ form {
   margin-top: 7px;
 }
 
+input, button {
+    border-radius: 6px;
+}
+
+button {
+  margin-left: 5px;
+}
+
 .menu {
   overflow: hidden;
   background-color: #333;
