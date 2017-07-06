@@ -21,7 +21,7 @@ body {
   color: black;
   font-size: 70px;
   margin-top: 40px;
-  left: 2px;
+  left: 7px;
   position: absolute;
   animation: hide 3.2s, appear 1s 3.2s, flickerR 1s 3.5s infinite;
 }
@@ -30,7 +30,7 @@ body {
   0% {color: white;}
   20% {color: black;}
   30% {color: white;}
-  35% {color: black;}
+  35% {color: red;}
   45% {color: white;}
   50% {color: black;}
   100% {color: black;}
@@ -218,7 +218,6 @@ p {
   z-index: 2;
   height: 40%;
   margin-left: 100px;
-  animation: fadeIn 5s;
 }
 
 .wrapper2 {
@@ -227,7 +226,10 @@ p {
   z-index: 2;
   height: 40%;
   margin-left: 100px;
-  animation: fadeIn 5s;
+}
+
+#takje {
+  animation: fadeIn 5.5s;
 }
 
 @keyframes fadeIn {
