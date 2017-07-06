@@ -131,18 +131,13 @@ app.post('/add', (req, res) => {
 
 
 ////// ROUTE --- OVERVIEW RESTAURANTS
-
 app.get('/restaurants', (req, res) => {
-  Restaurant.findAll()
-  .then((result) => {    
-    res.render('restaurants', {restaurants: result})
-  })
+    res.render('restaurants')
 })
 
 
 
 //// ROUTE -- SPECIFIC RESTURANT
-
 app.get('/restaurant', (req, res) => {
   Restaurant.findOne({
     where: {
@@ -158,7 +153,6 @@ app.get('/restaurant', (req, res) => {
 });
 
 //// ADD REVIEWS
-
 app.post('/restaurant', (req, res) => {
   Review.create({
     name: req.body.name,

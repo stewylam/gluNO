@@ -26,17 +26,3 @@ html
 							button(type='submit', name='submit') Search
 					li(class='rest') 
 						a(href='/restaurants') Restaurants
-
-		.container-fluid
-			.row
-				each restaurant in restaurants
-					div(class='box')
-						.col-3
-							<a class='name' href="/restaurant?id=#{restaurant.id}"> #{restaurant.Name} </a> 
-							p #{restaurant.Address}
-							p #{restaurant.City}
-							p <b>Website:</b> <a href='#{restaurant.Website}'>#{restaurant.Name}</a>
-							p <b>Description:</b> #{restaurant.Description}
-							br
-
-

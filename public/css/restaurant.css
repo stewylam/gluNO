@@ -4,7 +4,6 @@ html, body {
 
 body {
   margin: 0;
-
 }
 
 /* nav bar */
@@ -150,11 +149,11 @@ h1:hover {
 /* whac-a-wheat */
 
 img {
-  width: 5%;
+  width: 6%;
 }
 
-html {
-    cursor: url('cursor.png'), auto;
+.whacAwheat {
+    cursor: crosshair;
 }
 /* info */
 #front {
@@ -165,16 +164,22 @@ html {
   font-family: 'Londrina Sketch', cursive;
   font-size: 80px;
   position: absolute;
-  left: 300px;
-  top: 370px;
+  left: 260px;
+  top: 30px;
+  color: black;
 }
 
 .start {
   font-family: 'Londrina Sketch', cursive;
   font-size: 30px;
   position: absolute;
-  left: 490px;
-  top: 470px;
+  left: 460px;
+  top: 140px;
+  color: black;
+}
+
+.start:hover {
+  background-color: orange;
 }
 
 #spoon {
@@ -221,9 +226,11 @@ html {
   font-family: 'Londrina Sketch', cursive;
   font-size: 50px;
   position: absolute;
-  left: 250px;
-  top: 20px;
+  left: 160px;
+  top: 50px;
   text-align: center;
+  color: black;
+  font-weight: bold; 
 }
 
 #bal1 {
@@ -248,27 +255,25 @@ html {
 }
 
 /* plates */
-#background {
-  z-index: 5;
-}
+
 
 #lid4 {
-  animation: up 1s, up 1s 2s, up 1s 6s;
+  animation: up 1.5s, up 1.5s 4.5s, up 1.5s 10.5s;
   transform-origin: right bottom;
 }
 
 #lid3 {
-  animation: up 1s 1s, up 1s 3s;
+  animation: up 1.5s 1.5s, up 1.5s 6s, up 1.5s 9s;
   transform-origin: right bottom;
 } 
 
-#lid1 {
-  animation: up 1s 2s, up 1s 4s, up 1s 5s;
+#lid2 {
+  animation: up 1.5s 3s, up 1.5s 7.5s;
   transform-origin: right bottom;
 }
 
-#lid2 {
-  animation: up 1s 1s, up 1s 4s, up 1s 6s;
+#lid1 {
+  animation: up 1.5s 1.5s, up 1.5s 7.5s, up 1.5s 10.5s;
   transform-origin: right bottom;
 }
 
@@ -278,7 +283,6 @@ html {
   50% {transform: rotate(90deg)}
   100% {transform: rotate(0deg)}
 } 
-
 
 /* food */
 
@@ -297,7 +301,7 @@ html {
 /* LID 4 */
 #fries2 {
   z-index: -1;
-  animation: move 1s infinite, hide 7s 1s;
+  animation: move 1.5s infinite, hide 12s 1.5s;
   position: absolute;
   left:160px;
   top:120px;
@@ -305,15 +309,25 @@ html {
 
 #wheat {
   z-index: -1;
-  animation: move 1s infinite, hide 2s, hide 2s 5s;
+  animation: move 1s, hide 2.5s, hide 6s 6s;
   position: absolute;
   left:160px;
-  top:120px;
+  top:140px;
+}
+
+#boom {
+  animation: hide 5.2s, hide 6s 6s;
+  position: absolute;
+  left:160px;
+  top:120px; 
+  z-index:-1;
+  width: 8%;
+
 }
 
 #pizza {
   z-index: -1;
-  animation: move 1s infinite, hide 6s;
+  animation: move 1.5s infinite, hide 6.5s;
   position: absolute;
   left:160px;
   top:120px;
@@ -324,15 +338,24 @@ html {
 
 #wheat2 {
   z-index: -1;
-  animation: move 1s infinite, hide 6s 2s;
+  animation: move 1.5s infinite, hide 8s 2.5s;
+  position: absolute;
+  left:355px;
+  top:140px;
+}
+
+#boom2 {
+  animation: hide 2.0s, hide 8s 4s;
   position: absolute;
   left:355px;
   top:120px;
+  z-index:-1;
+  width: 8%;
 }
 
 #sushi2 {
   z-index: -1;
-  animation: move 1s infinite, hide 3s;
+  animation: move 1.5s infinite, hide 3.5s;
   position: absolute;
   left:370px;
   top:120px;
@@ -341,7 +364,7 @@ html {
 /* LID 2 */
 #sushi {
   z-index: -1;
-  animation: move 1s infinite, hide 5s 2s;
+  animation: move 1.5s infinite, hide 7s 4.5s;
   position: absolute;
   left:568px;
   top:120px;
@@ -349,46 +372,42 @@ html {
 
 #wheat4 {
   z-index: -1;
-  animation: move 1s infinite, hide 3s, hide 3s 6s;
+  animation: move 1.5s infinite, hide 5s;
   position: absolute;
   left:568px;
-  top:120px;
+  top:140px;
 }
 
-#sushi3 {
-  z-index: -1;
-  animation: move 1s infinite, hide 5s;
+#boom3 {
+  animation: hide 8.2s;
   position: absolute;
   left:568px;
   top:120px;
+  z-index:-1;
+  width: 8%;
+
 }
 
 /* LID 1 */
 
 #pizza2 {
   z-index: -1;
-  animation: move 1s infinite;
+  animation: move 1.5s infinite, hide 9s 3.5s;
   position: absolute;
   left:770px;
   top:120px;
-  animation: hide 6s 3s;
-}
+} 
 
 #fries {
   z-index: -1;
-  animation: move 1s infinite;
   position: absolute;
   left:770px;
   top:120px;
-  animation: hide 4s, hide 2s 5s;
+  animation: move 1.5s infinite, hide 5s;
 }
 
-#wheat3 {
-  z-index: -1;
-  animation: move 1s infinite, hide 5s;
-  position: absolute;
-  left:770px;
-  top:120px;
+/* shoot cursor */
+
+#shoot {
+  animation: shoot 5s;
 }
-
-
