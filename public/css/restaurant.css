@@ -4,7 +4,7 @@ html, body {
 
 body {
   margin: 0;
-  background-color: #333
+
 }
 
 /* nav bar */
@@ -116,6 +116,10 @@ h1:hover {
   text-align: center;
 }
 
+.container {
+  margin-top: 10px;
+}
+
 .info {
   padding: 23px;
   display: inline-block;
@@ -142,3 +146,249 @@ h1:hover {
 #floating-panel {
   visibility: hidden;
 }
+
+/* whac-a-wheat */
+
+img {
+  width: 5%;
+}
+
+html {
+    cursor: url('cursor.png'), auto;
+}
+/* info */
+#front {
+  z-index: -2;
+}
+
+#title {
+  font-family: 'Londrina Sketch', cursive;
+  font-size: 80px;
+  position: absolute;
+  left: 300px;
+  top: 370px;
+}
+
+.start {
+  font-family: 'Londrina Sketch', cursive;
+  font-size: 30px;
+  position: absolute;
+  left: 490px;
+  top: 470px;
+}
+
+#spoon {
+  animation: bestek 2s infinite;
+  transform-origin: center;
+}
+
+#fork {
+  animation: bestek1 2s infinite;
+  transform-origin: center;
+}
+
+#aim {
+  animation: aim 3s 0.2s infinite;
+}
+
+#wheaticon {
+  animation: aim 3s infinite;
+}
+
+@keyframes bestek {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(45deg);}
+  100% {transform: rotate(0deg);}
+}
+
+@keyframes bestek1 {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(-45deg);}
+  100% {transform: rotate(0deg);}
+}
+
+@keyframes aim {
+  0% {transform: translateX(0px);}
+  20% {transform: translateX(100px);}
+  40% {transform: translateY(-80px);}
+  60% {transform: translateX(-150px);}
+  80% {transform: translateY(80px);}
+  100% {transform: translateY(0px);}
+}
+
+/* end */
+#message {
+  font-family: 'Londrina Sketch', cursive;
+  font-size: 50px;
+  position: absolute;
+  left: 250px;
+  top: 20px;
+  text-align: center;
+}
+
+#bal1 {
+  animation: moveUp 3s infinite;
+}
+
+#bal2 {
+  animation: moveUp 3s 1s infinite;
+}
+
+#bal3 {
+  animation: moveUp 3s 0.5s infinite;
+}
+
+#bal4 {
+  animation: moveUp 3s infinite;
+}
+
+@keyframes moveUp {
+  0% {transform: translateY(150px);}
+  100% {transform: translateY(-200px);}
+}
+
+/* plates */
+#background {
+  z-index: 5;
+}
+
+#lid4 {
+  animation: up 1s, up 1s 2s, up 1s 6s;
+  transform-origin: right bottom;
+}
+
+#lid3 {
+  animation: up 1s 1s, up 1s 3s;
+  transform-origin: right bottom;
+} 
+
+#lid1 {
+  animation: up 1s 2s, up 1s 4s, up 1s 5s;
+  transform-origin: right bottom;
+}
+
+#lid2 {
+  animation: up 1s 1s, up 1s 4s, up 1s 6s;
+  transform-origin: right bottom;
+}
+
+
+@keyframes up {
+  0% {transform: rotate(0deg)}
+  50% {transform: rotate(90deg)}
+  100% {transform: rotate(0deg)}
+} 
+
+
+/* food */
+
+@keyframes move {
+  0% {transform: rotate(4deg);}
+  50% {transform: rotate(0deg);}
+  100% {transform: rotate(4deg);}
+}
+
+@keyframes hide {
+  0% {opacity: 0;}
+  99% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+/* LID 4 */
+#fries2 {
+  z-index: -1;
+  animation: move 1s infinite, hide 7s 1s;
+  position: absolute;
+  left:160px;
+  top:120px;
+}
+
+#wheat {
+  z-index: -1;
+  animation: move 1s infinite, hide 2s, hide 2s 5s;
+  position: absolute;
+  left:160px;
+  top:120px;
+}
+
+#pizza {
+  z-index: -1;
+  animation: move 1s infinite, hide 6s;
+  position: absolute;
+  left:160px;
+  top:120px;
+}
+
+
+/* LID 3 */
+
+#wheat2 {
+  z-index: -1;
+  animation: move 1s infinite, hide 6s 2s;
+  position: absolute;
+  left:355px;
+  top:120px;
+}
+
+#sushi2 {
+  z-index: -1;
+  animation: move 1s infinite, hide 3s;
+  position: absolute;
+  left:370px;
+  top:120px;
+}
+
+/* LID 2 */
+#sushi {
+  z-index: -1;
+  animation: move 1s infinite, hide 5s 2s;
+  position: absolute;
+  left:568px;
+  top:120px;
+}
+
+#wheat4 {
+  z-index: -1;
+  animation: move 1s infinite, hide 3s, hide 3s 6s;
+  position: absolute;
+  left:568px;
+  top:120px;
+}
+
+#sushi3 {
+  z-index: -1;
+  animation: move 1s infinite, hide 5s;
+  position: absolute;
+  left:568px;
+  top:120px;
+}
+
+/* LID 1 */
+
+#pizza2 {
+  z-index: -1;
+  animation: move 1s infinite;
+  position: absolute;
+  left:770px;
+  top:120px;
+  animation: hide 6s 3s;
+}
+
+#fries {
+  z-index: -1;
+  animation: move 1s infinite;
+  position: absolute;
+  left:770px;
+  top:120px;
+  animation: hide 4s, hide 2s 5s;
+}
+
+#wheat3 {
+  z-index: -1;
+  animation: move 1s infinite, hide 5s;
+  position: absolute;
+  left:770px;
+  top:120px;
+}
+
+

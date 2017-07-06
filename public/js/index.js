@@ -1,8 +1,3 @@
-$(document).ready(function() {
-	$('#popup').show()
-})
-
-
-$(.form).click( function() {
-	$('#popup').show()
-})
+$("#takje_1_").click(function() {
+  $('.wrapper').toggleClass('.wrapper');
+});

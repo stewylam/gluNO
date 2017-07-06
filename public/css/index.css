@@ -131,34 +131,41 @@ h2 {
 	font-family:'Cabin Sketch';
 	color: white;
 	font-size: 50px;
+  animation: big 4s ease-in-out;
 }
 
 
 button {
-	border-style: solid;
-	border-width: 2px;
-	border-radius: 80px;
-	border-color: red;
-	background-color: white;
-	font-family: Sintony;
-	font-size: 13px;
-	position: relative;
-}	
+  border-style: solid;
+  border-width: 2px;
+  border-color: red;
+  background-color: white;
+  font-family: Sintony;
+  font-size: 14px;
+  position: relative;
+}  
 
 
 button:hover {
-  border-color: orange;
+  border-color: white;
   background-color: black;
   color: white;
   font-weight: bold;
+  animation: big 1s;
 
-} 
+}
 
 p {
   font-family: Sintony;
   font-size: 12px;
   background: blue;
   text-align: center;
+}
+
+@keyframes big {
+  0% {transform: scale(0);}
+  50% {transform: scale(1.5);}
+  100% {transform: scale(1);}
 }
 
 /* right animation */
@@ -172,6 +179,7 @@ p {
   z-index: 2;
   height: 40%;
   margin-left: 100px;
+  animation: fadeIn 2s;
 }
 
 .wrapper2 {
@@ -180,72 +188,78 @@ p {
   z-index: 2;
   height: 40%;
   margin-left: 100px;
+  animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+  0%   { opacity: 0; }
+  30%  { opacity: 0; }
+  100% { opacity: 1; }
 }
 
 #top {
-  animation: moveLR 2s 1s infinite;
+  animation: moveLR 2s 1.5s infinite;
   transform-origin: left bottom;
 }
 
 #top:hover {
-    animation: flyAway 2s 0s;
+    animation: flyAway 5s 0s;
 }
 
 #B1 {
-  animation: moveRL 2s infinite;
+  animation: moveRL 2s 1s infinite;
   transform-origin: left bottom;
 }
 
 #B2 {
-  animation: moveLR 2s infinite;
+  animation: moveLR 2s 1s infinite;
   transform-origin: left bottom;
 }
 
 #B3 {
-  animation: moveRL 2s infinite;
+  animation: moveRL 2s 1s infinite;
   transform-origin: left bottom;
 }
 
 #B4 {
-  animation: moveLR 2s infinite;
+  animation: moveLR 2s 1s infinite;
   transform-origin: left bottom;
 }
 
 #B5 {
-  animation: moveRL 2s infinite;
+  animation: moveRL 2s 1s infinite;
   transform-origin: left bottom;
 }
 
 #B6 {
-  animation: moveLR 2s infinite;
+  animation: moveLR 2s 1s infinite;
   transform-origin: left bottom;
 }
 
 #O1 {
-  animation: moveLR 2s infinite;
+  animation: moveLR 2s 1s infinite;
   transform-origin: left top;
 }
 
 #O2 {
-  animation: moveRL 2s infinite;
+  animation: moveRL 2s 1s infinite;
   transform-origin: left top;
 }
 
 #O3 {
-  animation: moveLR 2s infinite;
+  animation: moveLR 2s 1s infinite;
   transform-origin: left top;
 }
 
 #O4 {
-  animation: moveRL 2s infinite;
+  animation: moveRL 2s 1s infinite;
   transform-origin: left top;
 }
 
 #O5 {
-  animation: moveLR 2s infinite;
+  animation: moveLR 2s 1s infinite;
   transform-origin: left top;
 }
-
 
 @keyframes moveLR {
   0% {transform: rotate(4deg);}
@@ -260,16 +274,12 @@ p {
 }
 
 @keyframes flyAway {
-  0% {transform: translateX(10px);}
-  10% {transform: translateX(20px);
-      transform: rotate(90deg);}
-  20% {transform: translateX(30px);}
-  30% {}
-  40% {transform: translateX(40px);}
-  50% {transform: translateX(50px);}
-  60% {transform: translateX(60px);}
-  70% {transform: translateX(70px);}
-  80% {transform: translateX(200px);}
-  90% {transform: translateX(250px);}
-  100% {transform: translateX(1000px);}
+  0% {transform: translateY(-100px);}
+  20% {transform: translateY(-200px);}
+  40% {transform: rotate(360deg);}
+  60% {transform: translateY(-300px);}
+  80% {transform: rotate(360deg);}
+  100% {transform: translateY(-400px);}
 }
+
+

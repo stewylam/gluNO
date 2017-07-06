@@ -28,3 +28,39 @@ geocoder.geocode({'address': address}, function(results, status) {
 });
 }
 
+// whac-a- wheat
+$(document).ready(function() {
+    $('.info').fadeIn()
+    $('.game').hide()
+    $('.end').hide()
+})
+
+$('.start').click(function() {
+  $('.info').hide() 
+  $('.game').show()
+
+
+  $("#wheat").click(function() {
+    (this).hide()
+  });
+
+  $('#wheat2').click(function() {
+    $('#wheat2').hide()
+  })
+
+  $('#wheat3').click(function() {
+    $('#wheat3').hide()
+  })
+
+  $('#wheat4').click(function() {
+    $('#wheat4').hide()
+  })
+
+
+  var end = function() {
+  $('.game').hide()
+  $('.end').fadeIn()
+};
+setTimeout(end, 7500)
+});
+

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="end" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="1000px" height="232.488px" viewBox="0 0 1000 232.488" enable-background="new 0 0 1000 232.488" xml:space="preserve">
+<rect y="0" fill="#FF3B98" width="1000" height="232.488"/>
+<g id="bal4">
+	<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M94.61,108.856c0,43.051-19.39,77.888-43.352,77.888"/>
+	
+		<ellipse transform="matrix(0.9884 -0.1519 0.1519 0.9884 -8.9271 14.3581)" fill="#DAFF04" cx="89.5" cy="65.6" rx="31" ry="43.5"/>
+</g>
+<g id="bal3">
+	<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M848.41,98.182c0,43.051-19.39,77.888-43.352,77.888"/>
+	
+		<ellipse transform="matrix(0.9827 -0.1851 0.1851 0.9827 3.6491 156.8119)" fill="#1FFFD0" cx="841.5" cy="58.866" rx="31" ry="43.5"/>
+</g>
+<g id="bal2">
+	<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M155.88,103.287c-22.813,36.509-24.831,76.328-4.51,89.025"/>
+	
+		<ellipse transform="matrix(0.9847 0.1744 -0.1744 0.9847 18.3918 -26.1458)" fill="#1FFFD0" cx="158" cy="91.601" rx="22.5" ry="33"/>
+</g>
+<g id="bal1">
+	<path fill="none" stroke="#000000" stroke-miterlimit="10" d="M912.668,108.856c-22.813,36.509-24.832,76.328-4.51,89.025"/>
+	
+		<ellipse transform="matrix(0.9514 0.308 -0.308 0.9514 69.7294 -278.4637)" fill="#DAFF04" cx="917" cy="81.661" rx="21.745" ry="31.505"/>
+</g>
+</svg>
