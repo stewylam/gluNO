@@ -13,23 +13,6 @@ $('.start').click(function() {
   $('.uitleg').hide() 
   $('.game').show()
 
-/*  $("#wheat").click(function() {
-    (this).hide()
-  });
-
-  $('#wheat2').click(function() {
-    $('#wheat2').hide()
-  })
-
-  $('#wheat3').click(function() {
-    $('#wheat3').hide()
-  })
-
-  $('#wheat4').click(function() {
-    $('#wheat4').hide()
-  })*/
-
-
   var end = function() {
   $('.game').hide()
   $('.end').fadeIn()
