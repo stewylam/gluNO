@@ -16,11 +16,12 @@ html
 	body
 		div(class='container-fluid')
 			div(class='menu')
+				h1(id='left') GLU
+				h1(id='right') NO
 				ul
 					li(class='add')
 						a(href='/') Add
 					li(class='search') 	
-						h1 GLUNO
 						form(action='/search', method='post', autocomplete='off')
 							input(type='text', name='search', placeholder=' Search on restaurant name or city' style='width: 300px' value=search)
 							button(type='submit', name='submit') Search

@@ -36,7 +36,6 @@ body {
   100% {color: black;}
 }
 
-
 section {
   color: #fff;
   text-align: center;
@@ -55,7 +54,6 @@ article {
   padding: 20px;
 }
 
-
 .container {
   display: table;
   width: 100%;
@@ -70,7 +68,6 @@ article {
   z-index: -1;
 }
 
-
 @keyframes slideDown {
      from {
          -webkit-transform: translateY(600px) 
@@ -78,7 +75,6 @@ article {
      to {
          -webkit-transform: translateY(0px) 
      }
-
 }
 
 .right {
@@ -89,7 +85,6 @@ article {
   animation: slideUp 0.75s 0s forwards;
   z-index: -1;
 }
-
 
 @keyframes slideUp {
      from {
@@ -149,7 +144,7 @@ h2 {
 	font-family:'Cabin Sketch';
 	color: white;
 	font-size: 50px;
-  animation: big 4s ease-in-out, heartbeat 3s 4s infinite;
+  animation: big 3s ease-in-out, heartbeat 3s 3s infinite;
 }
 
 
@@ -179,11 +174,11 @@ p {
 }
 
 .form {
-  animation: slideInL 1s ease-in;
+  animation: hide 2.5s, slideInL 1s 2s ease-in;
 }
 
 .search {
-  animation: slideInR 1s ease-in;
+  animation: hide 2.5s, slideInR 1s 2s ease-in;
 }
 
 @keyframes big {

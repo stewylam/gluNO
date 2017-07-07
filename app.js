@@ -21,9 +21,8 @@ app.use(session({
 //create tables -- if tables exists, then leave it
 db.sync()
 
-////// defines the table, keys and datatypes.
 
-// models
+//// MODELS
 const Restaurant = db.define('restaurant', {
   Name: Sequelize.STRING,
   Address: Sequelize.STRING,
@@ -56,7 +55,7 @@ else {
   console.log("Is database already populated?")
 }
 
-/// different routes
+/// ALL RESTAURANTS
 
 ////  ROUTE --- index
 app.get('/', (req, res) => {
@@ -66,7 +65,6 @@ app.get('/', (req, res) => {
 
 
 ///// ROUTE --- SEARCH 
-
 app.get('/search', (req, res) => {
   res.render('search')
 })
@@ -101,9 +99,8 @@ app.post('/search', (req, res) => {
 
 
 ///// ADD restaurant
-
 app.post('/add', (req, res) => {
-  if (req.body.Name.length === 0 || req.body.Address.length === 0 || req.body.City.length === 0 || req.body.Name.Website === 0 || req.body.info.length === 0) {
+  if (req.body.Name.length === 0 || req.body.Address.length === 0 || req.body.City.length === 0 || req.body.info.length === 0) {
     res.render('index', {messageL: 'Please fill out all information to share the tip'})
   }
 
@@ -136,7 +133,6 @@ app.get('/restaurants', (req, res) => {
 })
 
 
-
 //// ROUTE -- SPECIFIC RESTURANT
 app.get('/restaurant', (req, res) => {
   Restaurant.findOne({
@@ -145,30 +141,12 @@ app.get('/restaurant', (req, res) => {
     }
   })
   .then(result =>{
-/*    Review.findAll()
-  })
-  .then(result => { */
     res.render('restaurant', {restaurant: result})
   })
 });
 
-//// ADD REVIEWS
-app.post('/restaurant', (req, res) => {
-  Review.create({
-    name: req.body.name,
-    review: req.body.info,
-    rating: req.body.rating
-  })
-  .then(reviews => {
-    res.render('restaurant', {review: reviews})
-  })
-})
-
-
 
 //// App Listener
-
-
 const server = app.listen(3000, () => {
     console.log('server has started at ', server.address().port)
 });

@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #333;
 }
 
 /* nav bar */
@@ -57,7 +58,9 @@ button {
 
 .search {
   text-align: center;
+  margin-top: 45px;
 }
+
 
 h1 {
   font-family: 'monoton';
@@ -68,8 +71,34 @@ h1 {
   animation: slideDown 0.5s linear;
 }
 
-h1:hover {
-  color: yellow;
+#left {
+  position: absolute;
+  font-family: monoton;
+  font-size: 50px;
+  margin-top: -5px;
+  left: 625px;
+  color: white;
+}
+
+#right {
+  position: absolute;
+  font-family: monoton;
+  color: black;
+  font-size: 50px;
+  margin-top: -5px;
+  left: 760px;
+  animation: flickerR 1s 2s infinite;;
+}
+
+
+@keyframes flickerR {
+  0% {color: white;}
+  20% {color: black;}
+  30% {color: white;}
+  35% {color: red;}
+  45% {color: white;}
+  50% {color: black;}
+  100% {color: black;}
 }
 
 .add {
@@ -99,7 +128,7 @@ h1:hover {
 
 
 a {
-  font-family: Sintony;
+font-family: 'julius sans one'; 
   text-decoration: none;
 }
 
